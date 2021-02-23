@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="root">
+            <block class="Bitbull\NewsletterPopup\Block\NewsletterPopup" name="newsletter-popup"
+                   template="Bitbull_NewsletterPopup::newsletter/popup.phtml"
+                   ifconfig="bitbull_newsletterpopup/settings/enabled">
+                <block class="Magento\Newsletter\Block\Subscribe" name="newsletter-form" template="Bitbull_NewsletterPopup::newsletter/form.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
